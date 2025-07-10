@@ -1,4 +1,5 @@
 import React from "react";
+import "./Dashboard.css";
 
 function Dashboard({ candidates, searchQuery, setSearchQuery, onUpdateStatus, onDeleteCandidate }) {
   const filtered = candidates.filter((c) =>

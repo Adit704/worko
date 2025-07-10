@@ -1,35 +1,47 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   margin: 0;
   padding: 0;
+  line-height: 1.5;
 }
 
-h2 {
-  margin-bottom: 1rem;
-  color: #323131;
-}
-
+/* Container */
 .container {
   padding: 2rem;
   max-width: 1200px;
   margin: auto;
 }
 
+/* Heading */
+h2 {
+  margin-bottom: 1rem;
+  color: #323131;
+}
+
+/* Referral Form */
 .referral-form {
   background-color: #fff;
   padding: 1.5rem;
   margin-bottom: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .referral-form input,
 .referral-form select,
 .referral-form button {
-  display: block;
   width: 100%;
-  margin-bottom: 1rem;
   padding: 0.75rem;
   font-size: 1rem;
   border-radius: 4px;
@@ -42,26 +54,19 @@ h2 {
   font-weight: bold;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .referral-form button:hover {
   background-color: #45a049;
 }
 
-.candidate-card {
-  background-color: #fff;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-left: 5px solid #2196f3;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+.referral-form button:focus {
+  outline: 2px solid #1976d2;
+  outline-offset: 2px;
 }
 
-.candidate-card h3 {
-  margin-top: 0;
-  color: #333;
-}
-
+/* Input Types */
 input[type="text"],
 input[type="search"],
 input[type="email"],
@@ -80,10 +85,62 @@ input[type="search"] {
   margin-bottom: 1rem;
 }
 
+/* Candidate Cards */
+.dashboard-grid {
+  display: grid;
+  gap: 1rem;
+}
+
 @media (min-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
   .referral-form input,
   .referral-form select,
   .referral-form button {
     max-width: 600px;
   }
+}
+
+.candidate-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-left: 5px solid #2196f3;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.candidate-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.candidate-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: white;
+}
+
+.status-pending {
+  background-color: #f0ad4e;
+}
+
+.status-approved {
+  background-color: #5cb85c;
+}
+
+.status-rejected {
+  background-color: #d9534f;
 }

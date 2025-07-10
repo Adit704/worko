@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './ReferralForm.css';
 
 function ReferralForm({ onAddCandidate }) {
   const [formData, setFormData] = useState({

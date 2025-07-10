@@ -1,0 +1,69 @@
+/* Heading */
+h2 {
+  color: #323131;
+  margin-bottom: 1rem;
+}
+
+/* Search Input */
+input[type="search"] {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+/* Candidate Card */
+.candidate-card {
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid #2196f3;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.candidate-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.candidate-card h3 {
+  margin: 0 0 0.5rem;
+  color: #333;
+}
+
+.candidate-card p {
+  margin: 0.25rem 0;
+  color: #555;
+}
+
+/* Status Dropdown */
+.candidate-card select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fafafa;
+}
+
+/* Delete Button */
+.delete-btn {
+  margin-top: 0.75rem;
+  padding: 0.6rem 1rem;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
